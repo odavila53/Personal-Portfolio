@@ -48,6 +48,23 @@ nav a:hover {
     color: #4a9eff;
 }
 
+.nav-resume-btn {
+    background: none;
+    border: 2px solid #4a9eff;
+    color: #4a9eff;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.nav-resume-btn:hover {
+    background-color: #4a9eff;
+    color: #fff;
+}
+
 .theme-toggle {
     background: none;
     border: 2px solid #333;
@@ -78,7 +95,7 @@ nav a:hover {
 }
 
 .profile-image {
-    width: 180px;
+    width: 200px;
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
@@ -98,7 +115,7 @@ h1 {
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    background-color: linear-gradient(135deg, #fff, #b0b0b0);
+    background: linear-gradient(135deg, #fff, #b0b0b0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -133,6 +150,195 @@ h1 {
     transform: translate(-2px);
     box-shadow: 0 10px 25px rgba(74, 158, 255, 0.3);
 }
+
+.about {
+    padding: 5rem 2rem;
+    background-color: #0f0f0f;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #b0b0b0;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.subsection-title {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #4a9eff;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    justify-items: center;
+}
+
+.skills-card {
+    background-color: rgba(74, 158, 255, 0.1);
+    border: 2px solid rgba(74, 158, 255, 0.3);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #4a9eff;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.skills-card:hover {
+    background-color: rgba(74, 158, 255, 0.2);
+    border-color: #4a9eff;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(74, 158, 255, 0.3);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #1a1a1a;
+    margin: 2% auto;
+    padding: 2rem;
+    border: 2px solid #4a9eff;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 1000px;
+    position: relative;
+}
+
+.close-modal {
+    color: #b0b0b0;
+    float: right;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close-modal:hover {
+    color: #4a9eff;
+}
+
+.modal-content h2 {
+    color: #4a9eff;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.modal .resume-viewer {
+    max-width: 100%;
+    margin: 0 auto 2rem;
+    border: 2px solid rgba(74, 158, 255, 0.3);
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.modal .pdf-frame {
+    width: 100%;
+    height: 700px;
+    border: none;
+}
+
+.modal .download-button {
+    display: block;
+    background-color: #4a9eff;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.modal .download-button:hover {
+    background-color: #3a8eef;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(74, 158, 255, 0.3);
+}
+
+/* .resume {
+    padding: 5rem 2rem;
+    background-color: #0a0a0a;
+}
+
+.resume-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #b0b0b0;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.resume-viewer {
+    max-width: 900px;
+    margin: 0 auto 2rem;
+    border: 2px solid rgba(74, 158, 255, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.pdf-frame {
+    width: 100%;
+    height: 800px;
+    border: none;
+}
+
+.download-button {
+    display: inline-block;
+    background-color: #4a9eff;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+    display: block;
+    width: fit-content;
+}
+
+.download-button:hover {
+    background-color: #3a8eef;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(74, 158, 255, 0.3);
+} */
 
 footer {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -227,6 +433,76 @@ body.light-theme .cta-button:hover {
     box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
 }
 
+body.light-theme .about {
+    background-color: #fff;
+}
+
+body.light-theme .section-title {
+    color: #1a1a1a;
+}
+
+body.light-theme .about-text {
+    color: #4a4a4a;
+}
+
+body.light-theme .subsection-title {
+    color: #2563eb;
+}
+
+body.light-theme .skills-card {
+    background-color: rgba(37, 99, 235, 0.15);
+    border-color: rgba(37, 99, 235, 0.4);
+    color: #1d4ed8;
+}
+
+body.light-theme .skills-card:hover {
+    background-color: rgba(37, 99, 235, 0.2);
+    border-color: #2563eb;
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+}
+
+body.light-theme .nav-resume-btn {
+    border-color: #2563eb;
+    color: #2563eb;
+    background-color: transparent;
+
+}
+
+body.light-theme .nav-resume-btn:hover {
+    background-color: #2563eb;
+    color: #fff;
+}
+
+body.light-theme .modal-content {
+    background-color: #fff;
+    border-color: #2563eb;
+}
+
+body.light-theme .modal-content h2 {
+    color: #2563eb;
+}
+
+body.light-theme .close-modal {
+    color: #4a4a4a;
+}
+
+body.light-theme .close-modal:hover {
+    color: #2563eb;
+}
+
+body.light-theme .modal .resume-viewer {
+    border-color: rgba(37, 99, 235, 0.3);
+}
+
+body.light-theme .modal .download-button {
+    background-color: #2563eb;
+}
+
+body.light-theme .modal .download-button:hover {
+    background-color: #1d4ed8;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+}
+
 body.light-theme footer {
     border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
@@ -237,6 +513,7 @@ body.light-theme .social-links a {
 
 body.light-theme .social-links a:hover {
     color: #2563eb;
+    background-color: rgba(37, 99, 235, 0.1);
 }
 
 body.light-theme .copyright {

@@ -13,7 +13,7 @@
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
-            <a href="#resume">Contact</a>
+            <button id="resumeBtn" class="nav-resume-btn">Resume</button>
             <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">*</button>
         </nav>
     </header>
@@ -21,6 +21,8 @@
     <main>
         <section class="hero" id="home">
             <img src="profile.jpg" alt="Profile" class="profile-image">
+            <p class="greeting">Hello, I'm</p>
+            <h1>Oliver Davila</h1>
             <p class="description">
                 Hi, I'm Oliver Davila, a passionate Full Stack Developer with expertise in JavaScript, React, Node.js, and Python. I love building web applications that solve real-world problems and enhance user experiences.
             </p>
@@ -28,6 +30,43 @@
                 More About Me ->
             </a>
         </section>
+
+        <section class="about" id="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <p class="about-text">
+                    I'm currently an undergraduate student studying Computer Science, passionate about
+                    creating innovative solutions through code. I love exploring new technologies and
+                    building projects that make a difference. 
+                </p>
+
+                <h3 class="subsection-title">Languages & Technologies</h3>
+                <div class="skills-grid">
+                    <div class="skill-card">JavaScript</div>
+                    <div class="skill-card">Python</div>
+                    <div class="skill-card">Java</div>
+                    <div class="skill-card">HTML</div>
+                    <div class="skill-card">CSS</div>
+                    <div class="skill-card">React</div>
+                    <div class="skill-card">Node.js</div>
+                    <div class="skill-card">TypeScript</div>
+                    <div class="skill-card">SQL</div>
+                </div>
+            </div>
+        </section>
+
+        <div id="resumeModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>My Resume</h2>
+                <div class="resume-viewer">
+                    <iframe src="resume.pdf" class="pdf-frame" title="Resume PDF"></iframe>
+                </div>
+                <a href="resume.pdf" download class="download-button">
+                    Download Resume
+                </a>
+            </div>
+        </div>
     </main>
 
     <footer>

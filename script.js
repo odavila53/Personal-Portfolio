@@ -50,7 +50,7 @@ window.addEventListener('scroll', () => {
 const observerOptions = {
     threshold: 0.1,
     rootMargin: "0px 0px -50px 0px"
-}
+};
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -67,4 +67,25 @@ document.querySelectorAll('.hero > *').forEach(el => {
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
+});
+
+const resumeBtn = document.getElementById('resumeBtn');
+const resumeModal = document.getElementById('resumeModal');
+const closeModal = document.querySelector('.close-modal');
+
+resumeBtn.addEventListener('click', () => {
+    resumeModal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+});
+
+closeModal.addEventListener('click', () => {
+    resumeModal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+});
+
+window.addEventListener('click', (e) => {
+    if (e.target === resumeModal) {
+        resumeModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
 });
