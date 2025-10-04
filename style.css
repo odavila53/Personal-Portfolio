@@ -96,7 +96,7 @@ nav a:hover {
 
 .profile-image {
     width: 200px;
-    height: 180px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 2rem;
@@ -226,6 +226,121 @@ h1 {
     overflow: auto;
 }
 
+.contact {
+    padding: 5rem 2rem;
+    background-color: #0f0f0f;
+}
+
+.contact-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #b0b0b0;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3 rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    color: #4a9eff;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    background-color: rgba(74, 158, 255, 0.05);
+    border: 2px solid rgba(74, 158, 255, 0.3);
+    border-radius: 8px;
+    color: #e0e0e0;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #4a9eff;
+    background-color: rgba(74, 158, 255, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.submit-button {
+    width: 100%;
+    background-color: #4a9eff;
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #3a8eef;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(74, 158, 255, 0.3);
+}
+
+.submit-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.form-message {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    display: none;
+}
+
+.form-message.sucess {
+    display: block;
+    background-color: rgba(34, 197, 94, 0.2);
+    border: 2px solid #22c55e;
+    color: #22c55e;
+}
+
+.form-message.error {
+    display: block;
+    background-color: rgba(239, 68, 68, 0.2);
+    border: 2px solid #ef4444;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: auto;
+}
+
 .modal-content {
     background-color: #1a1a1a;
     margin: 2% auto;
@@ -290,29 +405,6 @@ h1 {
     box-shadow: 0 10px 25px rgba(74, 158, 255, 0.3);
 }
 
-/* .resume {
-    padding: 5rem 2rem;
-    background-color: #0a0a0a;
-}
-
-.resume-text {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #b0b0b0;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 3rem;
-}
-
-.resume-viewer {
-    max-width: 900px;
-    margin: 0 auto 2rem;
-    border: 2px solid rgba(74, 158, 255, 0.3);
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: #fff;
-}
-
 .pdf-frame {
     width: 100%;
     height: 800px;
@@ -338,7 +430,7 @@ h1 {
     background-color: #3a8eef;
     transform: translateY(-2px);
     box-shadow: 0 10px 25px rgba(74, 158, 255, 0.3);
-} */
+} 
 
 footer {
     border-top: 1px solid rgba(255, 255, 255, 0.05);

@@ -89,3 +89,41 @@ window.addEventListener('click', (e) => {
         document.body.style.overflow = 'auto';
     }
 });
+
+emailjs.init("NUagRg3_nReM7qHHX");
+
+const contactForm = document.getElementById('contactForm');
+const formMessage = document.getElementById('formMessage');
+const submitButton = contactForm.querySelector('.submit-button');
+const buttonText = submitButton.querySelector('.button-text');
+const buttonLoading = submitButton.querySelector('.button-loading');
+
+contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    submitButton.disabled = true;
+    buttonText.style.display = 'none';
+    buttonLoading.style.display = 'inline';
+    formMessage.style.display = 'none';
+
+    emailjs.sendForm('service_1gs0bza', 'template_4zrd9ji', this)
+        .then(function() {
+            formMessage.textContent = 'Message sent successfully! I\'ll get back to you soon!.';
+            formMessage.className = 'form-message success';
+            contactForm.reset();
+
+            submitButton.disabled = false;
+            buttonText.style.display = 'inline';
+            buttonLoading.style.display = 'none';
+        
+        }, function(error) {
+            formMessage.textContent = 'Oops! Something went wrong! Please try again';
+            formMessage.className = 'form-message error';
+            console.error('EmailJS error:', error);
+
+            submitButton.disabled = false;
+            buttonText.style.display = 'inline';
+            buttonLoading.style.display = 'none';
+
+        });
+});
