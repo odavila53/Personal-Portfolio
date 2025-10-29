@@ -1,6 +1,45 @@
 const themeToggle = document.getElementById('themeToggle');
 const body = document.body;
 
+// Create star background
+function createStars() {
+    const starsContainer = document.createElement('div');
+    starsContainer.className = 'stars-container';
+    document.body.appendChild(starsContainer);
+
+    // Number of stars to generate
+    const numOfStars = 200;
+    for (let i = 0; i < numOfStars; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+
+        // Random position
+        const x = Math.random() * 100;
+        const y = Math.random() * 100;
+
+        // Random size (1-3px)
+        const size = Math.random() * 2 + 1;
+
+        // Random animation duration (3-10 secs)
+        const duration = Math.random() * 7 + 3;
+
+        // Random animation delay
+        const delay = Math.random() * 5;
+
+        // Apply styles
+        star.style.left = `${x}%`;
+        star.style.top = `${y}%`;
+        star.style.width = `${size}px`;
+        star.style.height = `${size}px`;
+        star.style.setProperty('--duration', `${duration}s`);
+        star.style.setProperty('--delay', `${delay}s`);
+
+        starsContainer.appendChild(star);
+    }
+}
+
+createStars();
+
 // Check for saved theme preference or default to dark
 const currentTheme = localStorage.getItem('theme') || 'dark';
 if (currentTheme === 'light') {
